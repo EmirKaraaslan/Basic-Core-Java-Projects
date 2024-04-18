@@ -1,0 +1,81 @@
+
+-------------------------------- Student INFO-------------------------
+
+Student Number : 13244132
+
+Name: emr
+
+Last name : dsfads
+
+Midterm Score : 56.0
+
+Final Score : 67.0
+
+Total Score : 62.599999999999994
+
+Letter Grade:C
+
+-------------------------------- Student INFO-------------------------
+
+Student Number : 43432
+
+Name: dsf
+
+Last name : asd
+
+Midterm Score : 34.0
+
+Final Score : 77.0
+
+Total Score : 59.8
+
+Letter Grade:-
+
+-------------------------------- Student INFO-------------------------
+
+Student Number : 3241234
+
+Name: dasf
+
+Last name : asdf
+
+Midterm Score : 55.0
+
+Final Score : 66.0
+
+Total Score : 61.6
+
+Letter Grade:C
+
+-------------------------------- Student INFO-------------------------
+
+Student Number : 1341321
+
+Name: asdfs
+
+Last name : asdf
+
+Midterm Score : 34.0
+
+Final Score : 34.0
+
+Total Score : 34.0
+
+Letter Grade:F
+
+-------------------------------- Student INFO-------------------------
+
+Student Number : 2432432
+
+Name: sadf
+
+Last name : asdf
+
+Midterm Score : 55.0
+
+Final Score : 66.0
+
+Total Score : 61.6
+
+Letter Grade:C
+

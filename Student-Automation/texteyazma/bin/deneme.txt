@@ -1,0 +1,16 @@
+-------------------------------- Student INFO-------------------------
+
+Student Number : 456346
+
+Name: emir
+
+Last name : karaaslan
+
+Midterm Score : 56.0
+
+Final Score : 34.0
+
+Total Score : 42.8
+
+Letter Grade:F
+

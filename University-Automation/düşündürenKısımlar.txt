@@ -1,0 +1,29 @@
+02.04.2024
+
+*oluşturduğum öğrencileri yönergede verildiği üzere Bolum classının içindeki öğrenci arrayiinin içinde depolama işlemini main methodun 
+içinde kullanıcdan girdileri alarak mı oluşturmalıyım yoksa bunları yapan ayrı bir fonksiyonu Bolum classının içinde mi oluşturayım ? 
+
+*mesela şu an main method içinde oluşturulan öğrenci arrayinin içine o arrayin büyüklüğü kadar eleman eklemeye çalışıyorum  
+ama bu işlemi Bolum classının içinde bunun için bir method oluşturduğumda mevcut objenin bir özellğini değiştirmeye çalıştığım için "static" 
+keywordünü kullanamaycağımı söylüyor , static keywwordünü koyduğum zamanda ise bu sefer main methodun içinde bu methodu kullanamıyorum 
+şu anda bu paradoksu çözmeye çalışıyorum 
+
+--->  main methodun içinde bir obje oluşturup onun üzerinden static olmayan methodu çağırabiliriz. ?
+		
+
+		object.nonStaticMethod();
+
+
+* Görev 3.3 , diyelim ki 2 farklı bölüm var ve bu bölümlerin içinde kullanıcıdan alınan öğrenci ismi girdisi ile o öğrencileri bulup bilgilerini
+  yazdırmak istiyorum , eğer bu bölümlerin içinde  girilen ismi bulamazsam ekrana "öğrenci bulunamadı " yazacağım . Problem ise şu
+  eğer iki farklı bölümde aynı isme sahip olan iki farklı öğrenci varsa  bizim bütün  bölümlerdeki öğrencileri tarayıp taradıktan sonra bulamazsak 
+  bulunamadı dememiz gerekiyot , diyelim ki aranan isim EMİR ve ilk bölümde bu isme sahip bir öğrenci var bu noktada sistemin olası başka bir 
+  EMİR isminin olabilieceğini tahmin edip tüm bölümlerdeki öğrencileri kontrol etmesi gerekli  ve tüm bölümlere bakıldıktan sonra bulunamazsa 
+  bulunamadı yazmalı.
+
+
+-----------> kesinlikle bir şeyde takılıyorsan kalem kağıt al işlemi resmet!!!
+		
+	    inner loop içindeki conditionlara !found eklemezsen sadece if execute edilirse found ' u true yaparsan tüm bölümleri tarar sonra 
+	    outer loopa da müdahale etme ki tüm bölümleri tarama işlemi akamasın .  outer loopun dışında if oluştur ve eğer if(!found) ise öğrenci 
+	    bulunamadı yaz.

@@ -1,0 +1,29 @@
+-----------------
+Kursiyer ID: 5050
+Ad - SoyAd: Ahmet Ada
+Yaş: 23
+------
+Kurs: Resim
+ID: 1000
+Kurs: Hat
+ID: 1040
+-----------------
+Kursiyer ID: 5090
+Ad - SoyAd: Deniz Arslan
+Yaş: 30
+------
+Kurs: Resim
+ID: 1000
+Kurs: Tel kırma
+ID: 1060
+-----------------
+Kursiyer ID: 7075
+Ad - SoyAd: Ayşe Kaya
+Yaş: 20
+------
+Kurs: Müzik
+ID: 1070
+Kurs: Tiyatro
+ID: 1080
+Kurs: Grafik
+ID: 1100

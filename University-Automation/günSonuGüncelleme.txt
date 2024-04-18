@@ -1,0 +1,24 @@
+02.04.2024
+
+Salı
+__________
+
+kaldığım yer :
+
+bölümleri olşturup bölüm arrayinin içine atmak ve öğrenci arrayini oluşturup öğrenci arrayinin içine atmak.
+
+
+Çarşamba
+___________
+
+kaldığım yer :
+
+TASK 3.0'da tüm bölümlerin bilgilerini listele kısımnda , listeleme işlemini döngünün dışına attım 2 farklı bölüm yarattığımda 
+1. bölümü mesela bilgisayar mühendsiliğini basıyor ama 2. yarattığım yazılım mühendsiliğini basmıyor yarın bununla uğraşıcam
+
+
+Perşembe
+__________
+
+kaldığım yer :
+her şey bitti testi yapılacak. 

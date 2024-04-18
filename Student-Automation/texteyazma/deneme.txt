@@ -1,0 +1,16 @@
+-------------------------------- Student INFO-------------------------
+
+Student Number : 342345
+
+Name: emrit
+
+Last name : ert
+
+Midterm Score : 23.0
+
+Final Score : 23.0
+
+Total Score : 23.0
+
+Letter Grade:-
+

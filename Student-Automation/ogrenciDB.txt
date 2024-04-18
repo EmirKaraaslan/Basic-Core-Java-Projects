@@ -1,0 +1,40 @@
+-------------------------------- Student INFO-------------------------
+
+Student Number : 12344123
+
+Name: emir
+
+Last name : g?rer
+
+Midterm Score : 56.0
+
+Final Score : 32.0
+
+Total Score : 41.6
+
+Letter Grade:F
+
+-------------------------------- Student INFO-------------------------
+
+Student Number : 234543
+
+Name: meritm
+
+Last name : retyte
+
+Midterm Score : 23.0
+
+Final Score : 23.0
+
+Total Score : 23.0
+
+Letter Grade:-
+
+-------------------------------- Student INFO-------------------------
+
+Name : emir
+
+Last Name : rty
+
+Midterm score : 90.0
+

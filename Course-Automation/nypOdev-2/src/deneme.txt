@@ -1,0 +1,49 @@
+-----------------
+Kursiyer ID: 5050
+Ad - SoyAd: Ahmet Yılmaz
+Yaş: 25
+------
+Kurs: Resim
+ID: 1001
+Kurs: Hat
+ID: 1045
+-----------------
+Kursiyer ID: 5091
+Ad - SoyAd: Mehmet Öztürk
+Yaş: 33
+------
+Kurs: Grafik tasarım
+ID: 1003
+Kurs: Tel kırma
+ID: 1062
+-----------------
+Kursiyer ID: 7076
+Ad - SoyAd: Elif Aksoy
+Yaş: 22
+------
+Kurs: Müzik
+ID: 1076
+Kurs: Tiyatro
+ID: 1089
+Kurs: Grafik
+ID: 1102
+-----------------
+Kursiyer ID: 6089
+Ad - SoyAd: Can Korkmaz
+Yaş: 27
+------
+Kurs: Çini
+ID: 1025
+Kurs: Tel kırma
+ID: 1067
+-----------------
+Kursiyer ID: 7079
+Ad - SoyAd: Deniz Şahin
+Yaş: 29
+------
+Kurs: Müzik
+ID: 1075
+Kurs: Tiyatro
+ID: 1090
+Kurs: Grafik
+ID: 1105
