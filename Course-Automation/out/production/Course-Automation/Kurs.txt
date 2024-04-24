@@ -9,5 +9,3 @@
 1080-Tiyatro
 1090-Dans
 1100-Grafik
-9999-Yazılım
-8888-Android

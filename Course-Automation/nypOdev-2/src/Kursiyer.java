@@ -13,7 +13,7 @@ public class Kursiyer {
 
     Scanner sc = new Scanner(System.in);
 
-    File kursiyerDosyası = new File("C:\\Users\\LENOVO\\Desktop\\DetaySoft\\DetaySoftProjeler\\otomasyon\\detaySoftNypOdev2\\nypOdev-2\\src\\Kursiyer.txt");
+    File kursiyerDosyasi = new File("C:\\Users\\LENOVO\\Desktop\\DetaySoft\\DetaySoftProjeler\\otomasyon\\Basic-Core-Java-Projects\\Course-Automation\\nypOdev-2\\src\\Kursiyer.txt");
 
     public Kursiyer(){};
 
@@ -26,58 +26,49 @@ public class Kursiyer {
 
     //Başlangıç Görev "1.a"
     public void readKursiyerFromDBtoArrayList(ArrayList<Kursiyer> kursiyers) throws FileNotFoundException {
-        Scanner sc = new Scanner(kursiyerDosyası);
+        Scanner sc = new Scanner(kursiyerDosyasi);
 
         while (sc.hasNextLine()) {
             String line = sc.nextLine();
+            while (sc.hasNextLine()) {
+                // Kursiyer özellikleri
+                if (line.startsWith("*")) {
+                    Kursiyer kursiyer = new Kursiyer();
+                    ArrayList<Kurs> kurslar = new ArrayList<>();
+                    kursiyer.setKurslar(kurslar);
 
-            // Kursiyer özellikleri
-            if (line.startsWith("*")) {
-                Kursiyer kursiyer = new Kursiyer();
 
-                // Kursiyer ID
-                String[] kursiyerInfo = line.split("-");
-                kursiyer.setKursiyerId(kursiyerInfo[0].substring(1)); // ID'yi alırken * işaretini kaldır
+                    kursiyer.setKursiyerId(line.substring(1, line.indexOf("-")));
+                    kursiyer.setKursiyerAdSoyad(line.substring(line.indexOf("-") +1, line.lastIndexOf("-")));
+                    kursiyer.setKursiyerYas(line.substring(line.lastIndexOf("-")+1));
 
-                // Kursiyer Ad-SoyAd
-                kursiyer.setKursiyerAdSoyad(kursiyerInfo[1]);
+                    // Kursiyer nesnesini kursiyer listesine ekle
+                    kursiyers.add(kursiyer);
 
-                // Kursiyer Yaş
-                kursiyer.setKursiyerYas(kursiyerInfo[2]);
 
-                // Kursiyer kursları için ArrayList oluştur
-                ArrayList<Kurs> kurslar = new ArrayList<>();
+                    // Kurs bilgilerini oku
+                    while (sc.hasNextLine()) {
+                        line = sc.nextLine();
 
-                // Kurs bilgilerini oku
-                while (sc.hasNextLine()) {
-                    line = sc.nextLine();
+                        // Yeni bir kursiyer başladıysa, iç içe döngüden çık
+                        if (line.startsWith("*")) {
+                            break;
+                        }
 
-                    // Yeni bir kursiyer başladıysa, iç içe döngüden çık
-                    if (line.startsWith("*")) {
-                        break;
+                        // Kurs özellikleri
+                        else if (line.startsWith("%")) {
+                            Kurs kurs = new Kurs();
+                            // Kursiyer kursları için ArrayList oluştur
+
+                            kurs.setKursId(line.substring(line.indexOf("%"), line.indexOf("-")));
+                            kurs.setKursAd(line.substring(line.indexOf("-")));
+                            kursiyer.kurslar.add(kurs);
+
+                        }
                     }
 
-                    // Kurs özellikleri
-                    if (line.startsWith("%")) {
-                        Kurs kurs = new Kurs();
 
-                        // Kurs ID
-                        String[] kursInfo = line.split("-");
-                        kurs.setKursId(kursInfo[0].substring(1)); // ID'yi alırken % işaretini kaldır
-
-                        // Kurs Ad
-                        kurs.setKursAd(kursInfo[1]);
-
-                        // Kursiyer kurslar listesine ekle
-                        kurslar.add(kurs);
-                    }
                 }
-
-                // Kursiyer nesnesine kursları ekle
-                kursiyer.setKurslar(kurslar);
-
-                // Kursiyer nesnesini kursiyer listesine ekle
-                kursiyers.add(kursiyer);
             }
         }
     }
@@ -87,25 +78,22 @@ public class Kursiyer {
 
     //Başlangıç Görev "1.b"
     public void writeKursiyerFromArrayListToDB(ArrayList<Kursiyer> kursiyers){
-        String dosyaYolu = "C:\\Users\\LENOVO\\Desktop\\DetaySoft\\DetaySoftProjeler\\otomasyon\\detaySoftNypOdev2\\nypOdev-2\\src\\Kursiyer.txt";
+        String dosyaYolu = "C:\\Users\\LENOVO\\Desktop\\DetaySoft\\DetaySoftProjeler\\otomasyon\\Basic-Core-Java-Projects\\Course-Automation\\nypOdev-2\\src\\Kursiyer.txt";
 
         try {
             BufferedWriter writer = new BufferedWriter(new FileWriter(dosyaYolu));
 
             for(int i=0 ; i< kursiyers.size(); i++){
-                writer.write("-----------------");
-                writer.write("\n");
-                writer.write("Kursiyer ID: "+kursiyers.get(i).getKursiyerId()+"\n");
-                writer.write("Ad - SoyAd: "+ kursiyers.get(i).getKursiyerAdSoyad()+"\n");
-                writer.write("Yaş: "+kursiyers.get(i).getKursiyerYas()+"\n");
-                writer.write("------");
+                writer.write("*"+kursiyers.get(i).getKursiyerId());
+                writer.write("-"+ kursiyers.get(i).getKursiyerAdSoyad());
+                writer.write("-"+kursiyers.get(i).getKursiyerYas());
                 writer.write("\n");
 
 
+                writer.write("%");
                 for(int j = 0  ; j < kursiyers.get(i).kurslar.size();j++){
-
-                    writer.write("Kurs: "+kursiyers.get(i).kurslar.get(j).getKursAd()+"\n");
-                    writer.write("ID: "+kursiyers.get(i).kurslar.get(j).getKursId()+"\n");
+                    writer.write(kursiyers.get(i).kurslar.get(j).getKursId());
+                    writer.write(kursiyers.get(i).kurslar.get(j).getKursAd()+"\n");
                 }
 
 
@@ -120,7 +108,8 @@ public class Kursiyer {
 
             writer.close();
 
-            System.out.println("Dosya içeriği silindi.");
+            System.out.println("Dosya içeriği siliniyor...");
+            System.out.println("DB Güncellendi");
         } catch (IOException e) {
             System.out.println("Dosya işlemleri sırasında bir hata oluştu: " + e.getMessage());
         }

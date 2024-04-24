@@ -9,7 +9,7 @@ public class Kurs {
     private ArrayList<Kurs> kurslar;
 
     Scanner sc = new Scanner(System.in);
-    File KursDosyası = new File("C:\\Users\\LENOVO\\Desktop\\DetaySoft\\DetaySoftProjeler\\otomasyon\\detaySoftNypOdev2\\nypOdev-2\\src\\Kurs.txt");
+    File KursDosyası = new File("C:\\Users\\LENOVO\\Desktop\\DetaySoft\\DetaySoftProjeler\\otomasyon\\Basic-Core-Java-Projects\\Course-Automation\\nypOdev-2\\src\\Kurs.txt");
 
     public Kurs(){};
 
@@ -50,7 +50,7 @@ public class Kurs {
     //Başlangıç Görev "1.d"
 
     public void writeKursFromArrayListToDB(ArrayList<Kurs> kursus){
-        String dosyaYolu = "C:\\Users\\LENOVO\\Desktop\\DetaySoft\\DetaySoftProjeler\\otomasyon\\detaySoftNypOdev2\\nypOdev-2\\src\\Kurs.txt";
+        String dosyaYolu = "C:\\Users\\LENOVO\\Desktop\\DetaySoft\\DetaySoftProjeler\\otomasyon\\Basic-Core-Java-Projects\\Course-Automation\\nypOdev-2\\src\\Kurs.txt";
 
         try {
             BufferedWriter writer = new BufferedWriter(new FileWriter(dosyaYolu));
@@ -70,7 +70,8 @@ public class Kurs {
 
             writer.close();
 
-            System.out.println("Dosya içeriği silindi.");
+            System.out.println("Dosya içeriği siliniyor...");
+            System.out.println("DB Güncellendi");
         } catch (IOException e) {
             System.out.println("Dosya işlemleri sırasında bir hata oluştu: " + e.getMessage());
         }

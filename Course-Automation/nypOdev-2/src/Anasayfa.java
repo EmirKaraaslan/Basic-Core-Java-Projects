@@ -85,6 +85,8 @@ public class Anasayfa {
                 case 3:
                     System.out.print("Eklemek istediğiniz kursiyerin  Id'sini giriniz: ");
                     Kursiyer newKursiyer = new Kursiyer();
+                    ArrayList<Kurs> newKursus = new ArrayList<>();
+                    newKursiyer.kurslar = newKursus;
                     String kursiyerId = sc.next();
 
                     boolean aynı2 = true;
@@ -102,6 +104,7 @@ public class Anasayfa {
                             }else {
                                 newKursiyer.setKursiyerId(kursiyerId);
                                 aynı2 = false;
+                                break;
                             }
                         }
 
@@ -130,6 +133,9 @@ public class Anasayfa {
 
                             newKursiyer.kurslar.add(newKursiyerNewKurs);
 
+                            kursiyers.add(newKursiyer);
+
+
 
 
                         }
@@ -143,10 +149,11 @@ public class Anasayfa {
                 case 4:
                     System.out.print("Aramak istediğiniz kursiyerin ID'sini giriniz: ");
                     String aramaKursiyerID = sc.next();
-
+                        boolean found = false;
                     for(int i = 0; i< kursiyers.size();i++){
-                        if(kursiyers.get(i).getKursiyerAdSoyad().equals(aramaKursiyerID)){
+                        if(kursiyers.get(i).getKursiyerId().equals(aramaKursiyerID)){
                             System.out.println("Kursiyer bulundu !!!");
+                            found = true;
 
                             System.out.println("Kursiyer ID: "+ kursiyers.get(i).getKursiyerId());
                             System.out.println("Kursiyer Ad-Soyad: "+ kursiyers.get(i).getKursiyerAdSoyad());
@@ -161,9 +168,12 @@ public class Anasayfa {
                                 System.out.println(kursiyers.get(i).kurslar.get(j).getKursId()+" "+kursiyers.get(i).kurslar.get(j).getKursAd());
 
                             }
-                        }else{
-                            System.out.println("Kursiyer BULUNAMADI");
+                            System.out.println("--------------------------");
+
                         }
+                    }
+                    if(!found){
+                            System.out.println("Kursiyer BULUNAMADI");
                     }
 
 
@@ -174,11 +184,12 @@ public class Anasayfa {
                     System.out.print("Silmek istediğiniz kursiyerin ID'sini giriniz: ");
                     String silID = sc.next();
 
-                    for(Kursiyer kursiyer:kursiyers){
-                        if(kursiyer.getKursiyerId().equals(silID)){
-                            kursiyers.remove(kursiyer);
+                    for(int i = 0; i< kursiyers.size();i++){
+                        if(kursiyers.get(i).getKursiyerId().equals(silID)){
+                            kursiyers.remove(kursiyers.get(i));
                         }
                     }
+                    System.out.println("Silind!");
 
 
                     break;
